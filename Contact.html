@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="icon" href="https://png.pngtree.com/png-clipart/20230407/original/pngtree-best-quality-product-badge-logo-shape-png-image_9035045.png" type="image/x-icon">
+  <title>Contact Us - GGI News</title>
+  <style>
+    /* --- Light Mode (Default) --- */
+    :root {
+      --light-btn-bg: #FF7043; /* Coral Orange */
+      --light-btn-hover-bg: #F4511E; /* Darker Coral */
+    }
+    body {
+      color: #455A64;
+      transition: background-color 0.3s, color 0.3s;
+      background-image: url('https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop');
+      background-size: cover;
+      overflow-x: hidden; /* Prevent scrollbar during animation */
+      background-position: center;
+      background-attachment: fixed;
+    }
+    h1, h2, h3, h4, h5 { color: #1A237E; }
+    .navbar { transition: background-color 0.3s; }
+    .navbar-light.bg-light { background: linear-gradient(to bottom, #000000, #434343) !important; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .navbar-brand { color: #FFFFFF !important; font-weight: bold; }
+    .navbar-light .navbar-nav .nav-link { position: relative; transition: color 0.3s; font-weight: bold; color: #FFFFFF; }
+    .navbar-light .navbar-nav .nav-link:hover {
+      color: #FFD700; /* Gold on hover */
+    }
+    .navbar-light .navbar-nav .nav-link::after {
+      content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px;
+      bottom: 0; left: 0; background-color: #FF7043; transform-origin: bottom right;
+      background-color: #FFD700; transition: transform 0.25s ease-out;
+    }
+    .navbar-light .navbar-nav .nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    footer { background: linear-gradient(to top, #000000, #434343) !important; color: #FFFFFF; text-align: center; padding: 20px 0 10px; transition: background-color 0.3s, color 0.3s; }
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .copyright { border-top: 1px solid #333333; padding-top: 15px; margin-top: 10px; }
+    .logo{ height: 30px; width: 30px; border-radius: 50%; margin-right: 10px; }
+    .navbar-nav .nav-item { margin: 0 25px; }
+
+    /* --- Dark Mode Styles --- */
+    body.dark-mode { background-color: #121212; color: #E0E0E0; }
+    body.dark-mode .navbar { background-color: #1E1E1E !important; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 { color: #FFFFFF; }
+    body.dark-mode .navbar-brand { color: #42A5F5; }
+    body.dark-mode .nav-link { color: #FFFFFF !important; font-weight: bold; }
+    body.dark-mode .nav-link:hover {
+      color: #FFD700 !important; /* Gold on hover */
+    }
+    body.dark-mode footer { background: #1E1E1E; color: #E0E0E0; }
+    body.dark-mode .copyright { border-top-color: #333; }
+    body.dark-mode .footer-section a { color: #ccc; }
+    body.dark-mode .footer-section a:hover { color: #FFB300; }
+    body.dark-mode .social-icon { background-color: #333; color: #fff; border: 1px solid #555; }
+    body.dark-mode .social-icon:hover { background-color: #555; }
+    body.dark-mode .newsletter-form button { background-color: #FFB300; color: #121212; }
+    body.dark-mode .newsletter-form input { background-color: #333; border-color: #555; color: #E0E0E0; }
+    
+    /* --- Footer & Page Specific Styles --- */
+    .footer-content { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: left; padding-bottom: 20px; max-width: 1200px; margin: 0 auto; }
+    .footer-section { flex: 1; padding: 0 20px; min-width: 250px; margin-bottom: 20px; }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section.social-links { text-align: center; }
+    footer h4 { color: #FFFFFF; }
+    .footer-section a { text-decoration: none; transition: color 0.3s, transform 0.3s; color: #FFFFFF !important; display: inline-block; }
+    .footer-section a:hover { color: var(--light-btn-bg); transform: translateX(5px); }
+    .newsletter-form input { padding: 8px; border-radius: 4px; border: 1px solid #ccc; width: 70%; }
+    .newsletter-form button { padding: 8px 12px; border-radius: 4px; border: none; background-color: var(--light-btn-bg); color: white; cursor: pointer; margin-left: 4px; transition: background-color 0.3s, transform 0.3s; }
+    .newsletter-form button:hover { background-color: var(--light-btn-hover-bg); transform: scale(1.05); }
+    .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; margin: 0 5px; font-size: 18px; transition: background-color 0.3s, transform 0.3s; background-color: #000000; color: #FFFFFF !important; border: none; }
+    .social-icon:hover { background-color: #222222; transform: scale(1.1); }
+    .contact-container {
+      max-width: 900px; margin: auto;
+      background: rgba(255, 255, 255, 0.15); /* Frosted glass effect */
+      backdrop-filter: blur(10px);
+      padding: 3rem; border-radius: 16px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .error { font-size: 0.875rem; min-height: 1.2em; }
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .info-item:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
+    .info-item .fas { font-size: 1.5rem; color: var(--light-btn-bg); margin-right: 15px; width: 30px; text-align: center; }
+    .info-item span { font-size: 1rem; }
+    .form-control { transition: border-color 0.3s, box-shadow 0.3s; }
+    .form-control:focus {
+        border-color: var(--light-btn-bg);
+        box-shadow: 0 0 0 0.2rem rgba(255, 112, 67, 0.25);
+    }
+    .btn-primary {
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(255, 112, 67, 0.4);
+    }
+
+    body.dark-mode .contact-container { background: rgba(20, 20, 20, 0.25); border-color: rgba(255, 255, 255, 0.1); }
+    body.dark-mode .form-control { background-color: #2C2C2C; border-color: #444; color: #E0E0E0; }
+    body.dark-mode .form-control:focus { background-color: #333; border-color: #FFB300; box-shadow: 0 0 0 0.2rem rgba(255, 179, 0, 0.25); }
+    body.dark-mode .info-item { background-color: rgba(44, 44, 44, 0.5); box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    body.dark-mode .info-item:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
+    body.dark-mode .info-item .fas { color: #FFB300; }
+    body.dark-mode h1, body.dark-mode h3 { color: #FFFFFF; }
+    body.dark-mode .btn-primary { background-color: #FFB300; border-color: #FFB300; color: #121212; }
+    body.dark-mode .btn-primary:hover { background-color: #e6a100; border-color: #e6a100; box-shadow: 0 4px 12px rgba(255, 179, 0, 0.3); }
+    #contactForm label { color: #000000; }
+    body.dark-mode #contactForm label { color: #FFFFFF; }
+
+    /* --- Animations --- */
+    @keyframes slideInLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .col-md-7 {
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+    .col-md-5 {
+      animation: slideInRight 0.8s ease-out forwards;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="Image/logo.png" class="logo" alt="">
+    <a class="navbar-brand" href="Index.html">GGI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dactive"><a class="nav-link" href="Index.html">Home </a></li>
+        <li class="nav-item dactive"><a class="nav-link" href="Contact.html">Contact Us</a></li>
+        <li class="nav-item dactive"><a class="nav-link" href="Favorites.html">Favorites</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            <i class="fas fa-language"></i> Language
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item lang-item" href="#" data-lang="en">English</a>
+            <a class="dropdown-item lang-item" href="#" data-lang="hi">हिन्दी</a>
+            <a class="dropdown-item lang-item" href="#" data-lang="bn">বাংলা</a>
+            <a class="dropdown-item lang-item" href="#" data-lang="es">Español</a>
+            <a class="dropdown-item lang-item" href="#" data-lang="fr">Français</a>
+            <a class="dropdown-item lang-item" href="#" data-lang="de">Deutsch</a>
+          </div>
+        </li>
+        <button id="darkModeToggle" class="btn btn-outline-dark ml-2 my-2 my-sm-0">Dark Mode</button>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <div class="contact-container">
+      <h1 class="text-center mb-5">Get in Touch</h1>
+      <div class="row">
+        <div class="col-md-7">
+          <h3 class="mb-4">Send us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" class="form-control">
+              <div id="nameError" class="error text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control">
+              <div id="emailError" class="error text-danger"></div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+              <div id="messageError" class="error text-danger"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="background-color: var(--light-btn-bg); border-color: var(--light-btn-bg);">Submit</button>
+          </form>
+          <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
+            Thank you! Your message has been received.
+          </div>
+        </div>
+        <div class="col-md-5">
+          <h3 class="mb-4">Contact Information</h3>
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 News Lane, Media City, World</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>+1 (234) 567-890</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>contact@gginews.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h4 data-translate="aboutGGI">About GGI</h4>
+        <p data-translate="aboutText">GGI brings you the latest news from around the world, with a focus on speed, accuracy, and a clean reading experience.</p>
+      </div>
+      <div class="footer-section quick-links">
+        <h4 data-translate="quickLinks">Quick Links</h4>
+        <ul>
+          <li><a href="#" data-translate="tnc">T&C</a></li>
+          <li><a href="Contact.html" data-translate="contactUs">Contact Us</a></li>
+          <li><a href="#" data-translate="privacyPolicy">Privacy Policy</a></li>
+          <li><a href="#" data-translate="advertise">Advertise with us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section newsletter">
+        <h4 data-translate="newsletter">Newsletter</h4>
+        <p data-translate="newsletterText">Subscribe to get the latest news updates.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button data-translate="subscribe">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-section social-links">
+        <h4 data-translate="followUs">Follow Us</h4>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <p class="copyright">Copyright © 2025 GGI</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: { quickLinks: "Quick Links", tnc: "T&C", contactUs: "Contact Us", privacyPolicy: "Privacy Policy", followUs: "Follow Us", aboutGGI: "About GGI", aboutText: "GGI brings you the latest news from around the world, with a focus on speed, accuracy, and a clean reading experience.", newsletter: "Newsletter", newsletterText: "Subscribe to get the latest news updates.", subscribe: "Subscribe", advertise: "Advertise with us" },
+      hi: { quickLinks: "त्वरित लिंक", tnc: "नियम एवं शर्तें", contactUs: "संपर्क करें", privacyPolicy: "गोपनीयता नीति", followUs: "हमें फॉलो करें", aboutGGI: "GGI के बारे में", aboutText: "GGI आपको दुनिया भर से नवीनतम समाचार प्रदान करता है, जो गति, सटीकता और एक स्वच्छ पढ़ने के अनुभव पर केंद्रित है।", newsletter: "न्यूज़लेटर", newsletterText: "नवीनतम समाचार अपडेट प्राप्त करने के लिए सदस्यता लें।", subscribe: "सदस्यता लें", advertise: "हमारे साथ विज्ञापन करें" },
+      bn: { quickLinks: "দ্রুত লিঙ্ক", tnc: "শাবলী", contactUs: "যোগাযোগ করুন", privacyPolicy: "গোপনীয়তা নীতি", followUs: "আমাদের অনুসরণ করুন", aboutGGI: "GGI সম্পর্কে", aboutText: "GGI আপনার জন্য সারা বিশ্ব থেকে সর্বশেষ খবর নিয়ে আসে, গতি, নির্ভুলতা এবং একটি পরিষ্কার পড়ার অভিজ্ঞতার উপর দৃষ্টি নিবদ্ধ করে।", newsletter: "নিউজলেটার", newsletterText: "সর্বশেষ খবর আপডেট পেতে সাবস্ক্রাইব করুন।", subscribe: "সাবস্ক্রাইব", advertise: "আমাদের সাথে বিজ্ঞাপন দিন" },
+      es: { quickLinks: "Enlaces Rápidos", tnc: "T&C", contactUs: "Contáctanos", privacyPolicy: "Política de Privacidad", followUs: "Síguenos", aboutGGI: "Sobre GGI", aboutText: "GGI te trae las últimas noticias de todo el mundo, con un enfoque en la velocidad, precisión y una experiencia de lectura limpia.", newsletter: "Boletín", newsletterText: "Suscríbete para recibir las últimas noticias.", subscribe: "Suscribir", advertise: "Anuncia con nosotros" },
+      fr: { quickLinks: "Liens Rapides", tnc: "T&C", contactUs: "Contactez-nous", privacyPolicy: "Politique de Confidentialité", followUs: "Suivez-nous", aboutGGI: "À propos de GGI", aboutText: "GGI vous apporte les dernières nouvelles du monde entier, en mettant l'accent sur la vitesse, la précision et une expérience de lecture propre.", newsletter: "Newsletter", newsletterText: "Abonnez-vous pour recevoir les dernières mises à jour.", subscribe: "S'abonner", advertise: "Faites de la publicité avec nous" },
+      de: { quickLinks: "Schnell-Links", tnc: "AGB", contactUs: "Kontakt", privacyPolicy: "Datenschutz", followUs: "Folgen Sie uns", aboutGGI: "Über GGI", aboutText: "GGI bringt Ihnen die neuesten Nachrichten aus der ganzen Welt, mit Fokus auf Geschwindigkeit, Genauigkeit und ein sauberes Leseerlebnis.", newsletter: "Newsletter", newsletterText: "Abonnieren Sie, um die neuesten Nachrichten zu erhalten.", subscribe: "Abonnieren", advertise: "Werben Sie mit uns" }
+    };
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+            }
+        });
+    }
+
+    // Form validation script from original file
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactForm = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const isValid = validateForm();
+            if (isValid) {
+                contactForm.style.display = "none";
+                successMessage.style.display = "block";
+            }
+        });
+    });
+    function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+        nameError.textContent = ""; emailError.textContent = ""; messageError.textContent = "";
+        let isValid = true;
+        if (name === "") { nameError.textContent = "Name is required"; isValid = false; }
+        if (email === "") { emailError.textContent = "Email is required"; isValid = false; } 
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailError.textContent = "Invalid email format"; isValid = false; }
+        if (message === "") { messageError.textContent = "Message is required"; isValid = false; }
+        return isValid;
+    }
+
+    // Dark mode script
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    const nav = document.querySelector('.navbar');
+    function applyDarkMode(isDark) {
+        if (isDark) {
+            body.classList.add('dark-mode');
+            nav.classList.remove('navbar-light', 'bg-light');
+            nav.classList.add('navbar-dark');
+            darkModeToggle.textContent = 'Light Mode';
+            darkModeToggle.classList.remove('btn-outline-dark');
+            darkModeToggle.classList.add('btn-outline-light');
+        } else {
+            body.classList.remove('dark-mode');
+            nav.classList.add('navbar-light', 'bg-light');
+            nav.classList.remove('navbar-dark');
+            darkModeToggle.textContent = 'Dark Mode';
+            darkModeToggle.classList.remove('btn-outline-dark');
+            darkModeToggle.classList.add('btn-outline-light'); /* Use light button on navy nav */
+        }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const isDarkMode = localStorage.getItem('darkMode') === 'true';
+      applyDarkMode(isDarkMode);
+      darkModeToggle.addEventListener('click', () => {
+        const wasDarkMode = body.classList.contains('dark-mode');
+        applyDarkMode(!wasDarkMode);
+        localStorage.setItem('darkMode', !wasDarkMode);
+      });
+
+      document.querySelectorAll('.lang-item').forEach(item => {
+          item.addEventListener('click', e => {
+              e.preventDefault();
+              const selectedLang = item.getAttribute('data-lang');
+              setLanguage(selectedLang);
+          });
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
