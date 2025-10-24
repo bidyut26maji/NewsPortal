@@ -374,13 +374,24 @@
       border: none;
     }    .social-icon:hover { background-color: #222222; transform: scale(1.1); }
 
+    .logo-icon {
+      font-size: 24px;
+      color: white;
+      margin-right: 10px;
+      height: 30px;
+      width: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
   </style>
 </head>
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="Image/logo.png" class="logo" alt="">
-    <a class="navbar-brand" href="#">GGI</a>
+    <i class="fas fa-newspaper logo-icon"></i> <!-- <img src="Image/logo.png" class="logo" alt="Old GGI Logo"> -->
+    <a class="navbar-brand" href="Index.html">Rapid report</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -389,7 +400,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dactive"><a class="nav-link" href="Index.html">Home </a></li>
         <li class="nav-item dactive"><a class="nav-link" href="Contact.html">Contact Us</a></li>
-        <li class="nav-item dactive"><a class="nav-link" href="Favorites.html">Favorites</a></li>
+        <li class="nav-item dactive"><a class="nav-link" href="Favorites.html">My Favorites</a></li>
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
@@ -445,8 +456,8 @@
   <footer>
     <div class="footer-content">
       <div class="footer-section about">
-        <h4 data-translate="aboutGGI">About GGI</h4>
-        <p data-translate="aboutText">GGI brings you the latest news from around the world, with a focus on speed, accuracy, and a clean reading experience.</p>
+        <h4 data-translate="aboutGGI">About Rapid report</h4>
+        <p data-translate="aboutText">Rapid report brings you the latest news from around the world, with a focus on speed, accuracy, and a clean reading experience.</p>
       </div>
       <div class="footer-section quick-links">
         <h4 data-translate="quickLinks">Quick Links</h4>
@@ -473,18 +484,18 @@
         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
-    <p class="copyright">Copyright © 2025 GGI</p>
+    <p class="copyright">Copyright © 2025 Rapid report</p>
   </footer>
 
   <script>
     // --- Language Functionality (shortened) --
     const translations = {
-      en: { quickLinks: "Quick Links", tnc: "T&C", contactUs: "Contact Us", privacyPolicy: "Privacy Policy", followUs: "Follow Us", aboutGGI: "About GGI", aboutText: "GGI brings you the latest news from around the world, with a focus on speed, accuracy, and a clean reading experience.", newsletter: "Newsletter", newsletterText: "Subscribe to get the latest news updates.", subscribe: "Subscribe", advertise: "Advertise with us" },
-      hi: { quickLinks: "त्वरित लिंक", tnc: "नियम एवं शर्तें", contactUs: "संपर्क करें", privacyPolicy: "गोपनीयता नीति", followUs: "हमें फॉलो करें", aboutGGI: "GGI के बारे में", aboutText: "GGI आपको दुनिया भर से नवीनतम समाचार प्रदान करता है, जो गति, सटीकता और एक स्वच्छ पढ़ने के अनुभव पर केंद्रित है।", newsletter: "न्यूज़लेटर", newsletterText: "नवीनतम समाचार अपडेट प्राप्त करने के लिए सदस्यता लें।", subscribe: "सदस्यता लें", advertise: "हमारे साथ विज्ञापन करें" },
-      bn: { quickLinks: "দ্রুত লিঙ্ক", tnc: "শাবলী", contactUs: "যোগাযোগ করুন", privacyPolicy: "গোপনীয়তা নীতি", followUs: "আমাদের অনুসরণ করুন", aboutGGI: "GGI সম্পর্কে", aboutText: "GGI আপনার জন্য সারা বিশ্ব থেকে সর্বশেষ খবর নিয়ে আসে, গতি, নির্ভুলতা এবং একটি পরিষ্কার পড়ার অভিজ্ঞতার উপর দৃষ্টি নিবদ্ধ করে।", newsletter: "নিউজলেটার", newsletterText: "সর্বশেষ খবর আপডেট পেতে সাবস্ক্রাইব করুন।", subscribe: "সাবস্ক্রাইব", advertise: "আমাদের সাথে বিজ্ঞাপন দিন" },
-      es: { quickLinks: "Enlaces Rápidos", tnc: "T&C", contactUs: "Contáctanos", privacyPolicy: "Política de Privacidad", followUs: "Síguenos", aboutGGI: "Sobre GGI", aboutText: "GGI te trae las últimas noticias de todo el mundo, con un enfoque en la velocidad, precisión y una experiencia de lectura limpia.", newsletter: "Boletín", newsletterText: "Suscríbete para recibir las últimas noticias.", subscribe: "Suscribir", advertise: "Anuncia con nosotros" },
-      fr: { quickLinks: "Liens Rapides", tnc: "T&C", contactUs: "Contactez-nous", privacyPolicy: "Politique de Confidentialité", followUs: "Suivez-nous", aboutGGI: "À propos de GGI", aboutText: "GGI vous apporte les dernières nouvelles du monde entier, en mettant l'accent sur la vitesse, la précision et une expérience de lecture propre.", newsletter: "Newsletter", newsletterText: "Abonnez-vous pour recevoir les dernières mises à jour.", subscribe: "S'abonner", advertise: "Faites de la publicité avec nous" },
-      de: { quickLinks: "Schnell-Links", tnc: "AGB", contactUs: "Kontakt", privacyPolicy: "Datenschutz", followUs: "Folgen Sie uns", aboutGGI: "Über GGI", aboutText: "GGI bringt Ihnen die neuesten Nachrichten aus der ganzen Welt, mit Fokus auf Geschwindigkeit, Genauigkeit und ein sauberes Leseerlebnis.", newsletter: "Newsletter", newsletterText: "Abonnieren Sie, um die neuesten Nachrichten zu erhalten.", subscribe: "Abonnieren", advertise: "Werben Sie mit uns" }
+      en: { quickLinks: "Quick Links", tnc: "T&C", contactUs: "Contact Us", privacyPolicy: "Privacy Policy", followUs: "Follow Us", aboutGGI: "About Rapid report", aboutText: "Rapid report brings you the latest news from around the world, with a focus on speed, accuracy, and a clean reading experience.", newsletter: "Newsletter", newsletterText: "Subscribe to get the latest news updates.", subscribe: "Subscribe", advertise: "Advertise with us" },
+      hi: { quickLinks: "त्वरित लिंक", tnc: "नियम एवं शर्तें", contactUs: "संपर्क करें", privacyPolicy: "गोपनीयता नीति", followUs: "हमें फॉलो करें", aboutGGI: "Rapid report के बारे में", aboutText: "Rapid report आपको दुनिया भर से नवीनतम समाचार प्रदान करता है, जो गति, सटीकता और एक स्वच्छ पढ़ने के अनुभव पर केंद्रित है।", newsletter: "न्यूज़लेटर", newsletterText: "नवीनतम समाचार अपडेट प्राप्त करने के लिए सदस्यता लें।", subscribe: "सदस्यता लें", advertise: "हमारे साथ विज्ञापन करें" },
+      bn: { quickLinks: "দ্রুত লিঙ্ক", tnc: "শাবলী", contactUs: "যোগাযোগ করুন", privacyPolicy: "গোপনীয়তা নীতি", followUs: "আমাদের অনুসরণ করুন", aboutGGI: "Rapid report সম্পর্কে", aboutText: "Rapid report আপনার জন্য সারা বিশ্ব থেকে সর্বশেষ খবর নিয়ে আসে, গতি, নির্ভুলতা এবং একটি পরিষ্কার পড়ার অভিজ্ঞতার উপর দৃষ্টি নিবদ্ধ করে।", newsletter: "নিউজলেটার", newsletterText: "সর্বশেষ খবর আপডেট পেতে সাবস্ক্রাইব করুন।", subscribe: "সাবস্ক্রাইব", advertise: "আমাদের সাথে বিজ্ঞাপন দিন" },
+      es: { quickLinks: "Enlaces Rápidos", tnc: "T&C", contactUs: "Contáctanos", privacyPolicy: "Política de Privacidad", followUs: "Síguenos", aboutGGI: "Sobre Rapid report", aboutText: "Rapid report te trae las últimas noticias de todo el mundo, con un enfoque en la velocidad, precisión y una experiencia de lectura limpia.", newsletter: "Boletín", newsletterText: "Suscríbete para recibir las últimas noticias.", subscribe: "Suscribir", advertise: "Anuncia con nosotros" },
+      fr: { quickLinks: "Liens Rapides", tnc: "T&C", contactUs: "Contactez-nous", privacyPolicy: "Politique de Confidentialité", followUs: "Suivez-nous", aboutGGI: "À propos de Rapid report", aboutText: "Rapid report vous apporte les dernières nouvelles du monde entier, en mettant l'accent sur la vitesse, la précision et une expérience de lecture propre.", newsletter: "Newsletter", newsletterText: "Abonnez-vous pour recevoir les dernières mises à jour.", subscribe: "S'abonner", advertise: "Faites de la publicité avec nous" },
+      de: { quickLinks: "Schnell-Links", tnc: "AGB", contactUs: "Kontakt", privacyPolicy: "Datenschutz", followUs: "Folgen Sie uns", aboutGGI: "Über Rapid report", aboutText: "Rapid report bringt Ihnen die neuesten Nachrichten aus der ganzen Welt, mit Fokus auf Geschwindigkeit, Genauigkeit und ein sauberes Leseerlebnis.", newsletter: "Newsletter", newsletterText: "Abonnieren Sie, um die neuesten Nachrichten zu erhalten.", subscribe: "Abonnieren", advertise: "Werben Sie mit uns" }
     };
 
     function setLanguage(lang) {
@@ -496,27 +507,20 @@
       });
       fetchNews("technology", lang);
     }
-
-    document.querySelectorAll('.lang-item').forEach(item => {
-      item.addEventListener('click', e => {
-        e.preventDefault();
-        const selectedLang = item.getAttribute('data-lang');
-        setLanguage(selectedLang);
-      });
-    });
-
+    
     let currentLanguage = 'en';
+    let currentQuery = 'general'; // To keep track of the current news category/query
 
     // --- Fetch News ---
-    function fetchNews(query = "", language = "en") {
+    function fetchNews(query = "general", language = "en") {
+      currentQuery = query; // Update the current query
+      currentLanguage = language; // Update the current language
       const apiKey = "a7fd61bacfa046b89e4f93fbeb403322";
       let apiUrl;
-      // Use the more flexible 'top-headlines' endpoint for categories and general views
-      // and 'everything' only for specific user searches.
-      if (query) {
+      if (['general', 'politics', 'sports', 'technology', 'entertainment', 'business', 'health', 'science'].includes(query)) {
+        apiUrl = `https://newsapi.org/v2/top-headlines?category=${query}&language=${language}&apiKey=${apiKey}`;
+      } else { // Use 'everything' endpoint for specific search terms
         apiUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=${language}&sortBy=popularity&apiKey=${apiKey}`;
-      } else {
-        apiUrl = `https://newsapi.org/v2/top-headlines?category=general&language=${language}&apiKey=${apiKey}`;
       }
       fetch(apiUrl)
         .then(a => a.json())
@@ -524,13 +528,15 @@
           if (!d.articles) throw new Error("No articles found");
           let fd = "";
           d.articles.forEach(i => {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const isFavorited = favorites.some(fav => fav.url === i.url);
             // Escape single quotes in the article object for the data attribute
             const articleJson = JSON.stringify(i).replace(/'/g, "&apos;");
             fd += `
             <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
               <div class="card h-100" style="position: relative;">
-                <button class="favorite-btn top-left corner" onclick="toggleFavorite(this)" data-article='${articleJson}'>
-                  <i class="fas fa-heart"></i> 
+                <button class="favorite-btn top-left corner ${isFavorited ? 'active' : ''}" onclick="toggleFavorite(this)" data-article='${articleJson}'>
+                  <i class="fas fa-heart"></i>
                 </button>
                 <img src="${i.urlToImage || ''}" class="card-img-top" alt="Image not available">
                 <div class="card-body">
@@ -546,7 +552,12 @@
         })
         .catch(error => {
           console.error("Error fetching news:", error);
-          document.getElementById("finaldata").innerHTML = "<p>Failed to load news. Please try again later.</p>";
+          let errorMessage = `<div class="col-12 text-center alert alert-danger">
+                                <h4>Failed to Load News</h4>
+                                <p>This can happen for a few reasons. Please ensure you are running this page from a local web server (like VS Code's "Live Server") or hosting it on a web server. Opening the HTML file directly (<code>file://</code>) will prevent API requests due to browser security policies (CORS).</p>
+                                <p>Additionally, the free NewsAPI plan does not support requests from non-localhost domains when hosted on a live site.</p>
+                              </div>`;
+          document.getElementById("finaldata").innerHTML = errorMessage;
         });
     }
 
@@ -602,26 +613,34 @@
       const searchTerm = document.getElementById('search-input').value;
       fetchNews(searchTerm, currentLanguage);
     });
-  </script>
-  <script>
+
     // --- Initial Page Load Logic ---
     document.addEventListener('DOMContentLoaded', () => {
       const isDarkMode = localStorage.getItem('darkMode') === 'true';
       applyDarkMode(isDarkMode);
-      fetchNews("", "en"); // Fetch general news on initial load
-
+      fetchNews(currentQuery, currentLanguage); // Fetch general news on initial load
+      
       darkModeToggle.addEventListener('click', () => {
         const wasDarkMode = body.classList.contains('dark-mode');
         applyDarkMode(!wasDarkMode);
         localStorage.setItem('darkMode', !wasDarkMode);
       });
-
+      
       // Ticker item click listener
       document.querySelectorAll('.ticker-item').forEach(item => {
         item.addEventListener('click', (e) => {
           const category = e.target.getAttribute('data-category');
           document.getElementById('search-input').value = category; // Optional: update search bar
-          fetchNews(category, currentLanguage);
+          fetchNews(category, currentLanguage); // Use current language
+        });
+      });
+
+      document.querySelectorAll('.lang-item').forEach(item => {
+        item.addEventListener('click', e => {
+          e.preventDefault();
+          const selectedLang = item.getAttribute('data-lang');
+          setLanguage(selectedLang);
+          fetchNews(currentQuery, selectedLang); // Refetch news with new language
         });
       });
     });
